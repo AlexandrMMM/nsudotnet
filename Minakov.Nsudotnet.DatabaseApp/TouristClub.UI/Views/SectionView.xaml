@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TouristClub.UI.Views.SectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid Height="500" Width="1000">
+        <ScrollViewer Grid.Row="0" Grid.Column="0" Margin="12,40,700,196" RenderTransformOrigin="0.5,0.5">
+            <ListView SelectedItem="{Binding SelectSection, Mode=TwoWay}" ItemsSource="{Binding SectionList}" Width="966">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Название" Width ="100"  DisplayMemberBinding="{Binding Name}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+        <Button cal:Message.Attach="Delete"  Content="Delete" HorizontalAlignment="Left" Margin="12,309,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="RefreshList"  Content="RefreshList" HorizontalAlignment="Left" Margin="102,309,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="22,336,0,0" VerticalAlignment="Top"/>
+        <Button cal:Message.Attach="Update" Content="Update" HorizontalAlignment="Left" Margin="176,338,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="Add" Content="Add" HorizontalAlignment="Left" Margin="176,369,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="88,336,0,0" TextWrapping="Wrap" Text="{Binding SelectSection.Name}" VerticalAlignment="Top" Width="79"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="22,369,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="88,369,0,0" TextWrapping="Wrap" Text="{Binding NewSection.Name}" VerticalAlignment="Top" Width="79"/>
+        <ScrollViewer Grid.Row="0" Grid.Column="0" Margin="388,40,324,196" RenderTransformOrigin="0.5,0.5">
+            <ListView SelectedItem="{Binding SelectCampaignType, Mode=TwoWay}" ItemsSource="{Binding CampaignTypeList}" Width="288">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Название" Width ="100"  DisplayMemberBinding="{Binding Name}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+        <Button cal:Message.Attach="DeleteConnection"  Content="Delete" HorizontalAlignment="Left" Margin="388,309,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="RefreshCampaignTypeList"  Content="GiveAllType" HorizontalAlignment="Left" Margin="478,309,0,0" VerticalAlignment="Top" Width="92" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="AddConnection" Content="AddSection" HorizontalAlignment="Left" Margin="575,309,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="CampaignTypeFromSelectCampaignTypeSection" Content="Campaign Type From Select Campaign Type Section" HorizontalAlignment="Left" Margin="417,340,0,0" VerticalAlignment="Top" Width="225" Height="22" Background="#FF58B835"/>
+        <Label Content="Секции" HorizontalAlignment="Left" Margin="94,0,0,0" VerticalAlignment="Top" Height="30" Width="93" FontSize="18"/>
+        <Label Content="Типы походов" HorizontalAlignment="Left" Margin="470,0,0,0" VerticalAlignment="Top" Height="30" Width="127" FontSize="18"/>
+    </Grid>
+</UserControl>
