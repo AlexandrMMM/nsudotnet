@@ -13,6 +13,11 @@ namespace TouristClub.UI.ViewModels
         private RoutePointViewModel _routePointViewModel;
         private DiaryViewModel _diaryViewModel;
 
+        public StopViewModel()
+        {
+            StopEntity = new Stop();
+        }
+
         public StopViewModel(Stop stopEntity)
         {
             StopEntity = stopEntity;
