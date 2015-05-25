@@ -1,0 +1,5 @@
+Enable-Migrations -Force
+
+Update-Database -ConnectionString "Data Source=PEGU7-PC;Initial Catalog=TouristClub;Integrated Security=True" -ConnectionProviderName System.Data.SqlClient
+
+Add-Migration InitializationDatabaseMigration -ConnectionString "Data Source=PEGU7-PC;Initial Catalog=TouristClub;Integrated Security=True" -ConnectionProviderName System.Data.SqlClient
