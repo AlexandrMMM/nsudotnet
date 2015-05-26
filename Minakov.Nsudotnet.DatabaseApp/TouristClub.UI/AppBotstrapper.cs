@@ -12,7 +12,7 @@ namespace TouristClub.UI
         protected override void ConfigureContainer(ContainerBuilder builder)
         {
             base.ConfigureContainer(builder);
-            builder.Register(a => new DataContext("Data Source=PEGU7-PC;Initial Catalog=TouristClubDatabase;Integrated Security=True")).As<DataContext>().SingleInstance();
+            builder.Register(a => new DataContext("Data Source=PEGU7-PC;Initial Catalog=DatabaseTest;Integrated Security=True")).As<DataContext>().SingleInstance();
             builder.RegisterType<CampaignCrudService>().As<ICampaignCrudService>().SingleInstance();
             builder.RegisterType<CampaignTypeCrudService>().As<ICampaignTypeCrudService>().SingleInstance();
             builder.RegisterType<CategoryCrudService>().As<ICategoryCrudService>().SingleInstance();

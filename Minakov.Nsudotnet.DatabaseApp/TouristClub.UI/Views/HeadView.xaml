@@ -46,6 +46,6 @@
         <Label Content="Дата Найма:" HorizontalAlignment="Left" Margin="12,372,0,0" VerticalAlignment="Top"/>
         <DatePicker SelectedDate="{Binding NewHead.EmployDate}" Margin="102,374,799,102"/>
         <Button cal:Message.Attach="RefreshPersonalDataList"  Content="Данные" HorizontalAlignment="Left" Margin="455,321,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
-        <Button cal:Message.Attach="RefreshGroupList"  Content="Секции" HorizontalAlignment="Left" Margin="455,400,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="RefreshSectionList"  Content="Секции" HorizontalAlignment="Left" Margin="455,400,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
     </Grid>
 </UserControl>

@@ -44,7 +44,7 @@
         </ScrollViewer>
         <Label Content="Название :" HorizontalAlignment="Left" Margin="28,372,0,0" VerticalAlignment="Top"/>
         <Button cal:Message.Attach="RefreshTrainerList"  Content="Тренеры" HorizontalAlignment="Left" Margin="455,321,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
-        <Button cal:Message.Attach="RefreshGroupList"  Content="Секции" HorizontalAlignment="Left" Margin="455,400,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="RefreshSectionList"  Content="Секции" HorizontalAlignment="Left" Margin="455,400,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
         <TextBox HorizontalAlignment="Left" Height="26" Margin="108,345,0,0" TextWrapping="Wrap" Text="{Binding SelectGroup.Name}" VerticalAlignment="Top" Width="79"/>
         <TextBox HorizontalAlignment="Left" Height="26" Margin="108,376,0,0" TextWrapping="Wrap" Text="{Binding NewGroup.Name}" VerticalAlignment="Top" Width="79"/>
     </Grid>
