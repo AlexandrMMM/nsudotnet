@@ -34,7 +34,7 @@
             </ListView>
         </ScrollViewer>
         <Button cal:Message.Attach="DeleteConnection"  Content="Delete" HorizontalAlignment="Left" Margin="380,326,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
-        <Button cal:Message.Attach="RefreshGroupList"  Content="GiveAllSection" HorizontalAlignment="Left" Margin="470,326,0,0" VerticalAlignment="Top" Width="92" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="RefreshSectionList"  Content="GiveAllSection" HorizontalAlignment="Left" Margin="470,326,0,0" VerticalAlignment="Top" Width="92" Height="22" Background="#FF58B835"/>
         <Button cal:Message.Attach="AddConnection" Content="AddSection" HorizontalAlignment="Left" Margin="567,326,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
         <Button cal:Message.Attach="SectionFromSelectCampaignType" Content="Section From Select Campaign Type" HorizontalAlignment="Left" Margin="409,357,0,0" VerticalAlignment="Top" Width="225" Height="22" Background="#FF58B835"/>
         <Label Content="Секции" HorizontalAlignment="Left" Margin="469,16,0,0" VerticalAlignment="Top" Height="30" Width="93" FontSize="18"/>

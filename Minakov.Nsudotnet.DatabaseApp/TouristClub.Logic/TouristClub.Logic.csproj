@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56F4B94E-8AEC-4EC4-A9D5-9FAE725F8BF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TouristClub.Logic</RootNamespace>
+    <AssemblyName>TouristClub.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IncorrectDataException.cs" />
+    <Compile Include="Interface\ICampaignCrudService.cs" />
+    <Compile Include="Interface\ICampaignTypeCrudService.cs" />
+    <Compile Include="Interface\ICategoryCrudService.cs" />
+    <Compile Include="Interface\ICompetitionCrudService.cs" />
+    <Compile Include="Interface\ICrudService.cs" />
+    <Compile Include="Interface\IDiaryCrudService.cs" />
+    <Compile Include="Interface\IGroupCrudService.cs" />
+    <Compile Include="Interface\IHeadCrudService.cs" />
+    <Compile Include="Interface\IPersonalDataCrudService.cs" />
+    <Compile Include="Interface\IRoutePointCrudService.cs" />
+    <Compile Include="Interface\ISectionCrudService.cs" />
+    <Compile Include="Interface\ISportsmanCrudService.cs" />
+    <Compile Include="Interface\IStopCrudService.cs" />
+    <Compile Include="Interface\ITouristCrudService.cs" />
+    <Compile Include="Interface\ITrainerCrudService.cs" />
+    <Compile Include="Interface\ITrainigCrudService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Realisation\CampaignCrudService.cs" />
+    <Compile Include="Realisation\CampaignTypeCrudService.cs" />
+    <Compile Include="Realisation\CategoryCrudService.cs" />
+    <Compile Include="Realisation\CompetitionCrudService.cs" />
+    <Compile Include="Realisation\CrudService.cs" />
+    <Compile Include="Realisation\DiaryCrudService.cs" />
+    <Compile Include="Realisation\GroupCrudService.cs" />
+    <Compile Include="Realisation\HeadCrudService.cs" />
+    <Compile Include="Realisation\PersonalDataCrudService.cs" />
+    <Compile Include="Realisation\RoutePointCrudService.cs" />
+    <Compile Include="Realisation\SectionCrudService.cs" />
+    <Compile Include="Realisation\SportsmanCrudService.cs" />
+    <Compile Include="Realisation\StopCrudService.cs" />
+    <Compile Include="Realisation\TouristCrudService.cs" />
+    <Compile Include="Realisation\TrainerCrudService.cs" />
+    <Compile Include="Realisation\TrainigCrudService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TouristClub.Data\TouristClub.Data.csproj">
+      <Project>{fc3cb6d9-bb6b-4167-b2e1-2a2abe0c1b18}</Project>
+      <Name>TouristClub.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

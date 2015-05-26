@@ -2,10 +2,54 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid Height="500" Width="1000">
+        <ScrollViewer Grid.Row="0" Grid.Column="0" Margin="12,40,568,196" RenderTransformOrigin="0.5,0.5">
+            <ListView SelectedItem="{Binding SelectStop, Mode=TwoWay}" ItemsSource="{Binding StopList}" Width="966">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Дата остановки" Width ="100"  DisplayMemberBinding="{Binding DateTime}" />
+                        <GridViewColumn Header="Точка пути" Width ="100"  DisplayMemberBinding="{Binding RoutePoint.Name}" />
+                        <GridViewColumn Header="Время стоянки" Width ="100"  DisplayMemberBinding="{Binding StopTimeInMinutes}" />
+                        <GridViewColumn Header="План остановки" Width ="100"  DisplayMemberBinding="{Binding Diary.Name}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+        <Button cal:Message.Attach="Delete"  Content="Delete" HorizontalAlignment="Left" Margin="12,309,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="RefreshList"  Content="RefreshList" HorizontalAlignment="Left" Margin="102,309,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="Update" Content="Update" HorizontalAlignment="Left" Margin="420,343,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="Add" Content="Add" HorizontalAlignment="Left" Margin="420,372,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <ScrollViewer Grid.Row="0" Grid.Column="0" Margin="471,174,243,271" RenderTransformOrigin="0.5,0.5">
+            <ListView SelectedItem="{Binding SelectRoutePoint, Mode=TwoWay}" ItemsSource="{Binding RoutePointList}" Width="288">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Место" Width ="100"  DisplayMemberBinding="{Binding Name}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+        <Label Content="Дата остановки:" HorizontalAlignment="Left" Margin="33,346,0,0" VerticalAlignment="Top"/>
+        <DatePicker SelectedDate="{Binding SelectStop.DateTime}" Margin="136,346,765,130"/>
+        <ScrollViewer Grid.Row="0" Grid.Column="0" Margin="471,261,243,184" RenderTransformOrigin="0.5,0.5">
+            <ListView SelectedItem="{Binding SelectDiary, Mode=TwoWay}" ItemsSource="{Binding DiaryList}" Width="288">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Название" Width ="100"  DisplayMemberBinding="{Binding Name}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+        <Label Content="Дата остановки:" HorizontalAlignment="Left" Margin="33,372,0,0" VerticalAlignment="Top"/>
+        <DatePicker SelectedDate="{Binding NewStop.DateTime}" Margin="136,372,765,104"/>
+        <Button cal:Message.Attach="RefreshRoutePointList"  Content="Точка пути" HorizontalAlignment="Left" Margin="570,147,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Button cal:Message.Attach="RefreshDiaryList"  Content="План" HorizontalAlignment="Left" Margin="570,234,0,0" VerticalAlignment="Top" Width="85" Height="22" Background="#FF58B835"/>
+        <Label Content="Время стоянки:" HorizontalAlignment="Left" Margin="240,341,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="339,341,0,0" TextWrapping="Wrap" Text="{Binding SelectStop.StopTimeInMinutes}" VerticalAlignment="Top" Width="76"/>
+        <Label Content="Время стоянки:" HorizontalAlignment="Left" Margin="240,375,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="339,370,0,0" TextWrapping="Wrap" Text="{Binding NewStop.StopTimeInMinutes}" VerticalAlignment="Top" Width="76"/>
     </Grid>
 </UserControl>
