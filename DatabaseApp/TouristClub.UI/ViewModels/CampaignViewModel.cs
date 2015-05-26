@@ -18,6 +18,11 @@ namespace TouristClub.UI.ViewModels
         private DiaryViewModel _diaryViewModel;
         private SportsmanViewModel _sportsmanViewModel;
 
+        public CampaignViewModel()
+        {
+            CampaignEntity = new Campaign();
+        }
+
         public CampaignViewModel(Campaign campaignEntity)
         {
             CampaignEntity = campaignEntity;
