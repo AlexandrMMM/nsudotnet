@@ -10,7 +10,7 @@ namespace TouristClub.Data
         {
         }
 
-        public DataContext(string connectingString): base(Resources.ConnectingString)
+        public DataContext(string connectingString): base(connectingString)
         {
         }
 
