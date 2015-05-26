@@ -13,7 +13,7 @@ namespace TouristClub.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201505260813112_InitializationDatabaseMigration"; }
+            get { return "201505261442555_InitializationDatabaseMigration"; }
         }
         
         string IMigrationMetadata.Source

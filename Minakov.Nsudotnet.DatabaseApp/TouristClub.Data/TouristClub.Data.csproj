@@ -65,8 +65,10 @@
     <Compile Include="Entity\Tourist.cs" />
     <Compile Include="Entity\Trainer.cs" />
     <Compile Include="Entity\Traning.cs" />
-    <Compile Include="Migrations\201505260813112_InitializationDatabaseMigration.cs" />
-    <Compile Include="Migrations\201505260813112_InitializationDatabaseMigration.Designer.cs" />
+    <Compile Include="Migrations\201505261442555_InitializationDatabaseMigration.cs" />
+    <Compile Include="Migrations\201505261442555_InitializationDatabaseMigration.Designer.cs">
+      <DependentUpon>201505261442555_InitializationDatabaseMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -79,7 +81,9 @@
     <Content Include="Migration Command.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505260813112_InitializationDatabaseMigration.resx" />
+    <EmbeddedResource Include="Migrations\201505261442555_InitializationDatabaseMigration.resx">
+      <DependentUpon>201505261442555_InitializationDatabaseMigration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
